@@ -33,7 +33,7 @@ def _onUnMuteRequest(client, cb):
         client.send_message(chat_id, f"❗ **{cb.from_user.mention} is trying to UnMute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Leaving this chat...__")
         client.leave_chat(chat_id)
       else:
-        client.answer_callback_query(cb.id, text="❗ (အထူးသတိပြု) \n ဂရုထဲ၀င်ရေးလို့ရပြီဆိုရင် ညီကိုဒီခလုတ်ကိုမနှိပ်တော့နဲ့ဗျာနော်! အေးဆေးပေါ့ညီကို :) ", show_alert=True)
+        client.answer_callback_query(cb.id, text="❗ (အထူးသတိပြု) \n \n ဂရုထဲ၀င်ရေးလို့ရပြီဆိုရင် ညီကိုဒီခလုတ်ကိုမနှိပ်တော့နဲ့ဗျာနော်! အေးဆေးပေါ့ညီကို :) ", show_alert=True)
 
 
 
