@@ -33,7 +33,7 @@ def _onUnMuteRequest(client, cb):
         client.send_message(chat_id, f"❗ **{cb.from_user.mention} is trying to UnMute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Leaving this chat...__")
         client.leave_chat(chat_id)
       else:
-        client.answer_callback_query(cb.id, text="❗ Warning: Don't click the button if you can speak freely.", show_alert=True)
+        client.answer_callback_query(cb.id, text="❗ (အထူးသတိပြု) ဂရုထဲ၀င်ရေးလို့ရပြီဆိုရင် ဒီခလုတ်ကိုမနှိပ်တော့နဲ့ဗျာ!", show_alert=True)
 
 
 
@@ -50,9 +50,10 @@ def _check_member(client, message):
       except UserNotParticipant:
         try:
           sent_message = message.reply_text(
-              "{}, you are **not subscribed** to my [channel](https://t.me/{}) yet. Please [join](https://t.me/{}) and **press the button below** to unmute yourself.".format(message.from_user.mention, channel, channel),
+              "{} ရေ, ညီကို၀င်ရေးလို့မရတာက ဒီ [channel](https://t.me/{}) သိုင်းချယ်နယ်ကြီးကိုမ Join ရသေးလို့ဗျာ! ချယ်နယ်ကို Join ပြီးပြီဆိုရင်အောက်က Unmute ခလုတ်ကိုနှိပ်လိုက်ပြီး၀င်ရေးလို့ရပါပြီ".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
               reply_markup=InlineKeyboardMarkup(
+                  [[InlineKeyboardButton("ချယ်နယ်လင့်", callback_data="https://t.me/thinenetwork")]]
                   [[InlineKeyboardButton("UnMute Me", callback_data="onUnMuteRequest")]]
               )
           )
