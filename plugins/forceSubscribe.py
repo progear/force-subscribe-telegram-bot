@@ -25,7 +25,7 @@ def _onUnMuteRequest(client, cb):
             if cb.message.reply_to_message.from_user.id == user_id:
               cb.message.delete()
           except UserNotParticipant:
-            client.answer_callback_query(cb.id, text="❗ ပြထားတဲ့ [သိုင်းချယ်နယ်ကြီး](https://t.me/{}) ကို အရင် Join ပြီး Unmute Me ကိုနှိပ်လိုက်။ \n \n ဒါဆိုစကားပြောလို့ပြန်ရသွားမယ်ဗျ။ အယ်လယ် :) ", show_alert=True)
+            client.answer_callback_query(cb.id, text="❗ ပြထားတဲ့ သိုင်းချယ်နယ်ကြီး https://t.me/thineNetwork ကို အရင် Join ပြီး Unmute Me ကိုနှိပ်လိုက်။ \n \n ဒါဆိုစကားပြောလို့ပြန်ရသွားမယ်ဗျ။ အယ်လယ် :) ", show_alert=True)
       else:
         client.answer_callback_query(cb.id, text="❗ You are muted by admins for other reasons.", show_alert=True)
     else:
