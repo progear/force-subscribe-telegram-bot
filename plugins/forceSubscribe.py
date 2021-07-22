@@ -25,7 +25,7 @@ def _onUnMuteRequest(client, cb):
             if cb.message.reply_to_message.from_user.id == user_id:
               cb.message.delete()
           except UserNotParticipant:
-            client.answer_callback_query(cb.id, text="❗ ပြထားတဲ့ သိုင်းချယ်နယ်ကြီးလင့် https://t.me/thineNetwork ကို အရင် Join ပြီး Unmute လုပ်မယ် ကိုနှိပ်လိုက်။ \n \n ဒါဆိုစကားပြောလို့ပြန်ရသွားပြီး Mute List ကလွတ်သွားမယ်ဗျ။ အယ်လယ် :) ", show_alert=True)
+            client.answer_callback_query(cb.id, text="ပြထားတဲ့ သိုင်းချယ်နယ်ကြီးလင့် https://t.me/thineNetwork ကို အရင် Join ပြီး Unmute လုပ်မယ် ကိုနှိပ်လိုက်။ \n \n ဒါဆိုစကားပြောလို့ပြန်ရသွားပြီး Mute List ကလွတ်သွားမယ်ဗျ။ အယ်လယ် :) ", show_alert=True)
       else:
         client.answer_callback_query(cb.id, text="❗ You are muted by admins for other reasons.", show_alert=True)
     else:
@@ -53,7 +53,7 @@ def _check_member(client, message):
               "{} ရေ လုပ်ဖို့ အချိန် ၃ မိနစ်ပဲရမယ် မဟုတ်ရင် တစ်သက်လုံး Mute ဖြစ်နေမယ်,\n \n ညီကို၀င်ရေးလို့မရတာက ဒီ 👉 [သိုင်းချယ်နယ်ကြီး](https://t.me/{}) 👈 ကိုမ Join ရသေးလို့ဗျာ! \n \n အပေါ်ကချယ်နယ်ကိုနှိပ်ပြီး Join ပြီးပြီဆိုရင်အောက်က Unmute လုပ်မယ် ခလုတ်ကိုနှိပ်လိုက််မှ Mute List ကလွတ်မှာဗျ။".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
               reply_markup=InlineKeyboardMarkup(              
-                  [[InlineKeyboardButton("UnMute လုပ်မယ်", callback_data="onUnMuteRequest")]]
+                  [[InlineKeyboardButton("🔥 UnMute လုပ်မယ် 🔥", callback_data="onUnMuteRequest")]]
               )
           )
           client.restrict_chat_member(chat_id, user_id, ChatPermissions(can_send_messages=False))
