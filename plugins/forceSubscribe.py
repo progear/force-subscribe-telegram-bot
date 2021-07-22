@@ -52,11 +52,9 @@ def _check_member(client, message):
           sent_message = message.reply_text(
               "{} ရေ, ညီကို၀င်ရေးလို့မရတာက ဒီ [channel](https://t.me/{}) သိုင်းချယ်နယ်ကြီးကိုမ Join ရသေးလို့ဗျာ! ချယ်နယ်ကို Join ပြီးပြီဆိုရင်အောက်က Unmute ခလုတ်ကိုနှိပ်လိုက်ပြီး၀င်ရေးလို့ရပါပြီ".format(message.from_user.mention, channel, channel),
               disable_web_page_preview=True,
-              reply_markup=InlineKeyboardMarkup(
-                  
+              reply_markup=InlineKeyboardMarkup(                  
                   [[InlineKeyboardButton("UnMute Me", callback_data="onUnMuteRequest")]]
-
-[[InlineKeyboardButton(text="Channel Link",url="t.me/thinenetwork.format(context.bot.username")]]
+                  [[InlineKeyboardButton(text="Channel Link",url="t.me/thinenetwork.format(context.bot.username")]]
               )
           )
           client.restrict_chat_member(chat_id, user_id, ChatPermissions(can_send_messages=False))
