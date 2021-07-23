@@ -33,4 +33,4 @@ class Messages():
         "** Join our Network @ThineNetwork **"
       ]
 
-      START_MSG = "**Hey [{}](tg://user?id={})**\n__မင်္ဂလာဘာ :)"
+      START_MSG = "**Hey [{}](tg://user?id={})**\n__မင်္ဂလာဘာ :) မြုခံထားရရင် https://t.me/thinenetwork ကို Join ပြီး 'Unmute လုပ်မယ်' ကိုပြန်နှိပ်လိုက်ပါ "
